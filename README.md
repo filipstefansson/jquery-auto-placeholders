@@ -6,12 +6,16 @@ It automatically checks the browser compability, and if it doesn't support place
 
 ## Usage
 Import jquery.auto-placeholders.js
-`<script type="text/javascript" src="min/jquery.auto-placeholders.js"></script>`
+
+```<script type="text/javascript" src="min/jquery.auto-placeholders.js"></script>```
 
 If you want the placeholder to look like a real placeholder you should also add this CSS:
-`.placeholder {
+
+```ruby
+.placeholder {
 	color: darkGrey;
-}`
+}
+```
 
 ## Dependencies
 
