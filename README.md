@@ -1,4 +1,4 @@
-# jQuery Auto Placeholders
+# jQuery Auto Placeholders <1kb
 
 This simple jQuery plugin adds support for the HTML5 placeholder attribute on older browsers.
 
