@@ -11,10 +11,16 @@ Import jquery.auto-placeholders.js
 
 If you want the placeholder to look like a real placeholder you should also add this CSS:
 
-```ruby
+```css
 .placeholder {
 	color: darkGrey;
 }
+```
+
+And then you can use this on any HTML element:
+
+```javascript
+$("#example_form").autoPlaceholders()
 ```
 
 ## Dependencies
