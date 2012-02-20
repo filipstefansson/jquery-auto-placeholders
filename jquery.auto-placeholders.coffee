@@ -49,4 +49,9 @@ $.fn.autoPlaceholders = ->
 					if $(this).val() is ""
 						$(this).val(placeholder).addClass "placeholder"
 
+		# Don't submit placeholders
+		$("form").submit ->
+			$(this).find(":input.placeholder").each ->
+				$(this).val("")
+
 	# That's all!
