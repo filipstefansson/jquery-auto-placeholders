@@ -39,7 +39,7 @@ $.fn.autoPlaceholders = ->
 				# Bind focus event, so when user clicks the input the value disapears,
 				# if it's the same as placeholder.
 				$(this).bind "focus", ->
-					if $(this).val() is placeholder
+					if $(this).hasClass("placeholder")
 						$(this).val("").removeClass "placeholder"
 				
 
