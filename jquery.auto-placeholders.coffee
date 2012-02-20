@@ -29,24 +29,30 @@ $.fn.autoPlaceholders = ->
 
 		# Find all inputs and textareas in the selected element.
 		$("input, textarea", this).each ->
-			
+
 			# Get their placeholder value(if they have any) and add it as value.
 			# Also add a CSS-class for blurred inputs to mimic the placeholder look.
 			if $(this).attr("placeholder")?
 				placeholder = $(this).attr "placeholder"
+
 				$(this).val(placeholder).addClass "placeholder"
 
 				# Bind focus event, so when user clicks the input the value disapears,
 				# if it's the same as placeholder.
 				$(this).bind "focus", ->
-					if $(this).val() is placeholder
+					if $(this).hasClass("placeholder")
 						$(this).val("").removeClass "placeholder"
-				
+
 
 				# Bind blur event, so when user exit the input the value resets if
 				# the input is empty.
 				$(this).bind "blur", ->
 					if $(this).val() is ""
 						$(this).val(placeholder).addClass "placeholder"
+
+		# Don't submit placeholders
+		$("form").submit ->
+			$(this).find(":input.placeholder").each ->
+				$(this).val("")
 
 	# That's all!
